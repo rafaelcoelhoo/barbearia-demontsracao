@@ -53,7 +53,7 @@ export function Hero() {
         <div className="flex items-stretch gap-4">
           <div className="relative aspect-[4/5] flex-1 overflow-hidden rounded-lg bg-muted">
             <Image
-              src="/placeholder.svg?height=1000&width=800&query=barber%20trimming%20a%20man%27s%20hair%20in%20a%20small%20lisbon%20barbershop%20with%20blue%20and%20white%20azulejo%20tiles%20on%20the%20wall%2C%20warm%20natural%20light"
+              src="/images/hero.jpg?height=1000&width=800&query=barber%20trimming%20a%20man%27s%20hair%20in%20a%20small%20lisbon%20barbershop%20with%20blue%20and%20white%20azulejo%20tiles%20on%20the%20wall%2C%20warm%20natural%20light"
               alt="Barbeiro a cortar o cabelo de um cliente, com azulejos azuis e brancos na parede"
               fill
               priority

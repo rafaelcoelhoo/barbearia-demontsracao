@@ -6,14 +6,14 @@ const team = [
     role: 'Fundador e barbeiro',
     bio: 'Aprendeu o ofício com o avô, no Porto. Especialista em cortes clássicos e barba à navalha.',
     image:
-      '/placeholder.svg?height=600&width=600&query=portrait%20of%20a%20friendly%20portuguese%20barber%20in%20his%2040s%20with%20a%20beard%20wearing%20a%20dark%20apron',
+      '/images/rui.jpg?height=600&width=600&query=portrait%20of%20a%20friendly%20portuguese%20barber%20in%20his%2040s%20with%20a%20beard%20wearing%20a%20dark%20apron',
   },
   {
     name: 'Inês Carvalho',
     role: 'Barbeira',
     bio: 'Chegou em 2019 e trouxe os degradês e os cortes modernos. Tem mão leve para os mais novos.',
     image:
-      '/placeholder.svg?height=600&width=600&query=portrait%20of%20a%20young%20portuguese%20female%20barber%20with%20short%20hair%20holding%20clippers%20in%20a%20barbershop',
+      '/images/ines.jpg?height=600&width=600&query=portrait%20of%20a%20young%20portuguese%20female%20barber%20with%20short%20hair%20holding%20clippers%20in%20a%20barbershop',
   },
 ] as const
 

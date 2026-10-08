@@ -5,26 +5,31 @@ const photos = [
     query: 'close up of a sharp skin fade haircut on a man, barbershop',
     alt: 'Pormenor de um corte degradê acabado',
     className: 'md:row-span-2',
+    image: '/images/image6.jpg',
   },
   {
     query: 'vintage barber chair in a small barbershop with blue and white azulejo tiles',
     alt: 'Cadeira de barbeiro antiga em frente a parede de azulejos',
     className: '',
+    image: '/images/image2.jpg',
   },
   {
     query: 'barber applying hot towel on client face for traditional shave',
     alt: 'Barbeiro a colocar toalha quente no rosto de um cliente',
     className: '',
+    image: '/images/image3.jpg',
   },
   {
     query: 'straight razor, comb and scissors laid out on a wooden barber counter',
     alt: 'Navalha, pente e tesoura em cima de uma bancada de madeira',
-    className: '',
+    className: '',  
+    image: '/images/image5.jpg',
   },
   {
     query: 'young boy getting a haircut in a barbershop smiling',
     alt: 'Criança sorridente a cortar o cabelo',
     className: '',
+    image: '/images/image4.jpg',
   },
 ] as const
 
@@ -48,7 +53,7 @@ export function Gallery() {
               className={`relative overflow-hidden rounded-lg bg-muted ${index === 0 ? 'col-span-2 row-span-2 md:col-span-1' : ''} ${photo.className}`}
             >
               <Image
-                src={`/placeholder.svg?height=700&width=700&query=${encodeURIComponent(photo.query)}`}
+                src={photo.image + `?height=700&width=700&query=${encodeURIComponent(photo.query)}`}
                 alt={photo.alt}
                 fill
                 sizes="(min-width: 768px) 33vw, 50vw"

@@ -1,0 +1,168 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5f6f8;
+  --foreground: #131a2a;
+  --card: #f5f6f8;
+  --card-foreground: #131a2a;
+  --popover: #f5f6f8;
+  --popover-foreground: #131a2a;
+  --primary: #1d3e9e;
+  --primary-foreground: #f5f6f8;
+  --secondary: #e4e8f0;
+  --secondary-foreground: #131a2a;
+  --muted: #e4e8f0;
+  --muted-foreground: #4a5468;
+  --accent: #c68a2e;
+  --accent-foreground: #131a2a;
+  --destructive: #b42318;
+  --destructive-foreground: #f5f6f8;
+  --border: #d3d9e4;
+  --input: #c5cddc;
+  --ring: #1d3e9e;
+  --chart-1: #1d3e9e;
+  --chart-2: #c68a2e;
+  --chart-3: #4a5468;
+  --chart-4: #e4e8f0;
+  --chart-5: #131a2a;
+  --radius: 0.375rem;
+  --sidebar: #f5f6f8;
+  --sidebar-foreground: #131a2a;
+  --sidebar-primary: #1d3e9e;
+  --sidebar-primary-foreground: #f5f6f8;
+  --sidebar-accent: #e4e8f0;
+  --sidebar-accent-foreground: #131a2a;
+  --sidebar-border: #d3d9e4;
+  --sidebar-ring: #1d3e9e;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-zilla), 'Zilla Slab', Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Stripe period is 40px along the 45° gradient line, i.e. 40 / sin(45°) ≈ 56.5685px vertically,
+   so animating by that amount loops seamlessly. */
+.barber-pole {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--primary) 0 10px,
+    var(--background) 10px 20px,
+    var(--accent) 20px 30px,
+    var(--background) 30px 40px
+  );
+  animation: barber-pole-spin 2.4s linear infinite;
+}
+
+@keyframes barber-pole-spin {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 56.5685px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barber-pole {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.legal-prose {
+  color: var(--foreground);
+  line-height: 1.7;
+}
+.legal-prose h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.legal-prose h3 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.legal-prose p,
+.legal-prose ul,
+.legal-prose ol {
+  margin-bottom: 1rem;
+}
+.legal-prose ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.legal-prose ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+.legal-prose li {
+  margin-bottom: 0.35rem;
+}
+.legal-prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-prose strong {
+  font-weight: 600;
+}

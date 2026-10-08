@@ -10,6 +10,7 @@ node_modules/
 /.next/
 /out/
 .next
+next-env.d.ts
 
 # Production
 /build
@@ -65,6 +66,7 @@ Thumbs.db
 
 # Optional npm cache directory
 .npm
+package-lock.json
 
 # Optional eslint cache
 .eslintcache

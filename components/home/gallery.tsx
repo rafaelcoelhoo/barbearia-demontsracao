@@ -5,31 +5,31 @@ const photos = [
     query: 'close up of a sharp skin fade haircut on a man, barbershop',
     alt: 'Pormenor de um corte degradê acabado',
     className: 'md:row-span-2',
-    image: '/images/image6.jpg',
+    image: '/images/image6.webp',
   },
   {
     query: 'vintage barber chair in a small barbershop with blue and white azulejo tiles',
     alt: 'Cadeira de barbeiro antiga em frente a parede de azulejos',
     className: '',
-    image: '/images/image2.jpg',
+    image: '/images/image2.webp',
   },
   {
     query: 'barber applying hot towel on client face for traditional shave',
     alt: 'Barbeiro a colocar toalha quente no rosto de um cliente',
     className: '',
-    image: '/images/image3.jpg',
+    image: '/images/image3.webp',
   },
   {
     query: 'straight razor, comb and scissors laid out on a wooden barber counter',
     alt: 'Navalha, pente e tesoura em cima de uma bancada de madeira',
     className: '',  
-    image: '/images/image5.jpg',
+    image: '/images/image5.webp',
   },
   {
     query: 'young boy getting a haircut in a barbershop smiling',
     alt: 'Criança sorridente a cortar o cabelo',
     className: '',
-    image: '/images/image4.jpg',
+    image: '/images/image4.webp',
   },
 ] as const
 
